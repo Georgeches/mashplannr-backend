@@ -14,7 +14,7 @@ class MerchandisersController < ApplicationController
     end
 
     def create
-        merchandiser = Merchandiser.create!(admin_params)
+        merchandiser = Merchandiser.create!(merchandiser_params)
         render json: merchandiser, status: :created
     end
 
@@ -35,6 +35,6 @@ class MerchandisersController < ApplicationController
 
     private
     def merchandiser_params
-        params.permit(:merchandiser)
+        params.permit(:name, :id_number, :phone_number, :vehicle_registration, :status, :profile_picture)
     end
 end
