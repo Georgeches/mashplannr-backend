@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
     end
 
     def create
-        order =Order.create!(admin_params)
+        order =Order.create!(order_params)
         render json: order, status: :created
     end
 
@@ -35,6 +35,6 @@ class OrdersController < ApplicationController
 
     private
     def order_params
-        params.require(:order)
+        params.permit(:customer_name, :products_ordered, :date, :merchandiser_id, :location)
     end
 end

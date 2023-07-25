@@ -5,4 +5,5 @@ class Order < ApplicationRecord
   validates :products_ordered, presence: true
   validates :date, presence: true
   validates :location, presence: true
+  validates :merchandiser_id, presence: true
 end

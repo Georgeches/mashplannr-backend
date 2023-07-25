@@ -154,3 +154,943 @@ Migrating to AddLocationToOrders (20230725122008)
   [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/" for ::1 at 2023-07-25 15:23:53 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/"):
+  
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:24:00 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"price"=>39, "product_id"=>249, "user_id"=>16, "merchandiser"=>{}}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.7ms | Allocations: 2176)
+
+
+  
+NameError (undefined local variable or method `admin_params' for #<MerchandisersController:0x00000000019fc8>
+Did you mean?  admin_path):
+  
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started POST "/orders" for ::1 at 2023-07-25 15:24:13 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"price"=>39, "product_id"=>249, "user_id"=>16, "order"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms | Allocations: 2143)
+
+
+  
+NameError (undefined local variable or method `admin_params' for #<OrdersController:0x0000000001a090>
+Did you mean?  admin_path):
+  
+app/controllers/orders_controller.rb:17:in `create'
+Started POST "/orders" for ::1 at 2023-07-25 15:24:48 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"price"=>39, "product_id"=>249, "user_id"=>16, "order"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.4ms | Allocations: 260)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:38:in `order_params'
+app/controllers/orders_controller.rb:17:in `create'
+Started GET "/orders" for ::1 at 2023-07-25 15:24:57 +0300
+Processing by OrdersController#index as */*
+  Parameters: {"price"=>39, "product_id"=>249, "user_id"=>16, "order"=>{}}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 851)
+
+
+Started POST "/admins" for ::1 at 2023-07-25 15:25:20 +0300
+Processing by AdminsController#create as */*
+  Parameters: {"admin"=>{}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.3ms | Allocations: 217)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: admin):
+  
+app/controllers/admins_controller.rb:38:in `admin_params'
+app/controllers/admins_controller.rb:17:in `create'
+Started GET "/admins" for ::1 at 2023-07-25 15:25:26 +0300
+Processing by AdminsController#index as */*
+  Parameters: {"admin"=>{}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 831)
+
+
+Started POST "/admins" for ::1 at 2023-07-25 15:26:25 +0300
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins_controller.rb:17:in `create'
+  [1m[36mAdmin Create (0.7ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "George Chesire"], ["password", "[FILTERED]"], ["created_at", "2023-07-25 12:26:25.127706"], ["updated_at", "2023-07-25 12:26:25.127706"]]
+  ↳ app/controllers/admins_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admins_controller.rb:17:in `create'
+Completed 201 Created in 39ms (Views: 0.8ms | ActiveRecord: 8.9ms | Allocations: 18273)
+
+
+Started GET "/admins" for ::1 at 2023-07-25 15:26:35 +0300
+Processing by AdminsController#index as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 821)
+
+
+Started GET "/admins/1" for ::1 at 2023-07-25 15:26:47 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "id"=>"1", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 812)
+
+
+Started PATCH "/admins/1" for ::1 at 2023-07-25 15:27:03 +0300
+Processing by AdminsController#update as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "id"=>"1", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:22:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins_controller.rb:23:in `update'
+  [1m[36mAdmin Update (0.5ms)[0m  [1m[33mUPDATE "admins" SET "password" = ?, "updated_at" = ? WHERE "admins"."id" = ?[0m  [["password", "[FILTERED]"], ["updated_at", "2023-07-25 12:27:03.706647"], ["id", 1]]
+  ↳ app/controllers/admins_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admins_controller.rb:23:in `update'
+Completed 200 OK in 18ms (Views: 0.6ms | ActiveRecord: 8.4ms | Allocations: 2472)
+
+
+Started GET "/admins/1" for ::1 at 2023-07-25 15:27:12 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "id"=>"1", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 602)
+
+
+Started DELETE "/admins/1" for ::1 at 2023-07-25 15:27:27 +0300
+Processing by AdminsController#destroy as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "id"=>"1", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins_controller.rb:32:in `destroy'
+  [1m[36mAdmin Destroy (0.4ms)[0m  [1m[31mDELETE FROM "admins" WHERE "admins"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/admins_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (7.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/admins_controller.rb:32:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 8.1ms | Allocations: 1843)
+
+
+Started DELETE "/admins/1" for ::1 at 2023-07-25 15:27:34 +0300
+Processing by AdminsController#destroy as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "id"=>"1", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:31:in `destroy'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 978)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/admins_controller.rb:32:in `destroy'
+Started GET "/admins/1" for ::1 at 2023-07-25 15:27:39 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "id"=>"1", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:8:in `show'
+Completed 404 Not Found in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 506)
+
+
+Started GET "/admins" for ::1 at 2023-07-25 15:27:44 +0300
+Processing by AdminsController#index as */*
+  Parameters: {"name"=>"George Chesire", "password"=>"[FILTERED]", "admin"=>{"name"=>"George Chesire", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 606)
+
+
+Started POST "/admins" for ::1 at 2023-07-25 15:27:58 +0300
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"George Chesire", "admin"=>{"name"=>"George Chesire"}}
+Completed 422 Unprocessable Entity in 4ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1250)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:28:22 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "merchandiser"=>{"name"=>"George Chesire"}}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms | Allocations: 2146)
+
+
+  
+NameError (undefined local variable or method `admin_params' for #<MerchandisersController:0x0000000001ea78>
+Did you mean?  admin_path):
+  
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started GET "/merchandisers" for ::1 at 2023-07-25 15:28:34 +0300
+Processing by MerchandisersController#index as */*
+  Parameters: {"name"=>"George Chesire", "merchandiser"=>{"name"=>"George Chesire"}}
+  [1m[36mMerchandiser Load (0.3ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.3ms | Allocations: 847)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:30:07 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "merchandiser"=>{"name"=>"George Chesire"}}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 2058)
+
+
+  
+NameError (undefined local variable or method `admin_params' for #<MerchandisersController:0x0000000001ebe0>
+Did you mean?  admin_path):
+  
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:31:10 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "merchandiser"=>{"name"=>"George Chesire"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.1ms | Allocations: 2154)
+
+
+  
+NameError (undefined local variable or method `admin_params' for #<MerchandisersController:0x00000000022df8>
+Did you mean?  admin_path):
+  
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:31:35 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "merchandiser"=>{"name"=>"George Chesire"}}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms | Allocations: 15424)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:32:41 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"merchandiser"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 146)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: merchandiser):
+  
+app/controllers/merchandisers_controller.rb:38:in `merchandiser_params'
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:32:53 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "merchandiser"=>{"name"=>"George Chesire"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 131)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:37:15 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "merchandiser"=>{"name"=>"George Chesire"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.0ms | Allocations: 2340)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:41:02 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "status"=>"onleave", "merchandiser"=>{"name"=>"George Chesire", "status"=>"onleave"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.3ms | Allocations: 2332)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/merchandisers_controller.rb:17:in `create'
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:47:50 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "merchandiser"=>{"name"=>"George Chesire"}}
+[31mUnpermitted parameter: :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00005590c01e57c0>, params: {"name"=>"George Chesire", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire"}} }[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 6053)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:49:09 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameters: :phone_number, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe08a01ee8>, params: {"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 1108)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:49:54 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameters: :phone_number, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe08a431b8>, params: {"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1104)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:50:37 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameters: :phone_number, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe047cf098>, params: {"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1103)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:50:48 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameter: :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe048565e8>, params: {"name"=>"George Chesire", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1090)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:50:57 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "phone_number"=>"12", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameters: :phone_number, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe08ad9f78>, params: {"name"=>"George Chesire", "phone_number"=>"12", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"12", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1100)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:51:07 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "phone_number"=>"1676762", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"1676762", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameters: :phone_number, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe08af23c0>, params: {"name"=>"George Chesire", "phone_number"=>"1676762", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"1676762", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1103)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:51:12 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "phone_number"=>"16767f62", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"16767f62", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameters: :phone_number, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe048e0f18>, params: {"name"=>"George Chesire", "phone_number"=>"16767f62", "id_number"=>"23", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"23", "phone_number"=>"16767f62", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1100)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:51:44 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "phone_number"=>"16767f62", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "phone_number"=>"16767f62", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameters: :phone_number, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe0493b490>, params: {"name"=>"George Chesire", "phone_number"=>"16767f62", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "phone_number"=>"16767f62", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 1688)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:52:03 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameter: :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe049b5650>, params: {"name"=>"George Chesire", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1678)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:52:19 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameter: :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe08c4b988>, params: {"name"=>"George Chesire", "id_number"=>"34", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 1090)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:52:31 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameters: :phone_number, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe04ace550>, params: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 1100)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:53:03 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+[31mUnpermitted parameter: :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efe08e8b9f0>, params: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/merchandisers_controller.rb:17:in `create'
+  [1m[36mMerchandiser Create (0.4ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "George Chesire"], ["id_number", "34"], ["phone_number", "23"], ["vehicle_registration", "23"], ["status", "working"], ["profile_picture", "http"], ["created_at", "2023-07-25 12:53:03.064659"], ["updated_at", "2023-07-25 12:53:03.064659"]]
+  ↳ app/controllers/merchandisers_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/merchandisers_controller.rb:17:in `create'
+Completed 201 Created in 12ms (Views: 0.5ms | ActiveRecord: 3.6ms | Allocations: 4767)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-25 15:53:12 +0300
+Processing by MerchandisersController#index as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 957)
+
+
+Started GET "/merchandisers/1" for ::1 at 2023-07-25 15:53:22 +0300
+Processing by MerchandisersController#show as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "id"=>"1", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>23, "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+  [1m[36mMerchandiser Load (0.3ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/merchandisers_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 869)
+
+
+Started PATCH "/merchandisers/1" for ::1 at 2023-07-25 15:53:34 +0300
+Processing by MerchandisersController#update as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"25", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "id"=>"1", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"25", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/merchandisers_controller.rb:22:in `update'
+[31mUnpermitted parameters: :id, :merchandiser. Context: { controller: MerchandisersController, action: update, request: #<ActionDispatch::Request:0x00007efdf81be408>, params: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"25", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "controller"=>"merchandisers", "action"=>"update", "id"=>"1", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"25", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/merchandisers_controller.rb:23:in `update'
+  [1m[36mMerchandiser Update (0.3ms)[0m  [1m[33mUPDATE "merchandisers" SET "phone_number" = ?, "updated_at" = ? WHERE "merchandisers"."id" = ?[0m  [["phone_number", "25"], ["updated_at", "2023-07-25 12:53:34.432742"], ["id", 1]]
+  ↳ app/controllers/merchandisers_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/merchandisers_controller.rb:23:in `update'
+Completed 200 OK in 16ms (Views: 0.6ms | ActiveRecord: 8.2ms | Allocations: 2611)
+
+
+Started DELETE "/merchandisers/1" for ::1 at 2023-07-25 15:53:45 +0300
+Processing by MerchandisersController#destroy as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"25", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "id"=>"1", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"25", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http"}}
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/merchandisers_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/merchandisers_controller.rb:32:in `destroy'
+  [1m[36mMerchandiser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "merchandisers" WHERE "merchandisers"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/merchandisers_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/merchandisers_controller.rb:32:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 8.0ms | Allocations: 1795)
+
+
+Started DELETE "/admins" for ::1 at 2023-07-25 15:54:03 +0300
+  
+ActionController::RoutingError (No route matches [DELETE] "/admins"):
+  
+Started POST "/orders" for ::1 at 2023-07-25 15:54:14 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"25", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "order"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.3ms | Allocations: 233)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: order):
+  
+app/controllers/orders_controller.rb:38:in `order_params'
+app/controllers/orders_controller.rb:17:in `create'
+Started GET "/orders" for ::1 at 2023-07-25 15:54:20 +0300
+Processing by OrdersController#index as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"25", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"http", "order"=>{}}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.3ms | Allocations: 843)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 15:56:26 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"34", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>"34", "location"=>"working"}}
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.4ms | Allocations: 15071)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/orders_controller.rb:17:in `create'
+Started POST "/orders" for ::1 at 2023-07-25 15:57:48 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"34", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>"34", "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efe04ace7a8>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"34", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>"34", "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 36ms (Views: 1.2ms | ActiveRecord: 2.1ms | Allocations: 12679)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:58:27 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"34", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "merchandiser"=>{}}
+[31mUnpermitted parameters: :customer_name, :merchandiser_id, :products_ordered, :date, :location, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efdf80b1a10>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"34", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{}} }[0m
+Completed 422 Unprocessable Entity in 11ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 6359)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 15:59:36 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"soap, meat", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"ht", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"soap, meat", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"ht"}}
+[31mUnpermitted parameter: :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007efdf81cc418>, params: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"soap, meat", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"ht", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"soap, meat", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"ht"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/merchandisers_controller.rb:17:in `create'
+  [1m[36mMerchandiser Create (0.4ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "George Chesire"], ["id_number", "34"], ["phone_number", "soap, meat"], ["vehicle_registration", "23"], ["status", "working"], ["profile_picture", "ht"], ["created_at", "2023-07-25 12:59:36.341163"], ["updated_at", "2023-07-25 12:59:36.341163"]]
+  ↳ app/controllers/merchandisers_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/merchandisers_controller.rb:17:in `create'
+Completed 201 Created in 15ms (Views: 1.2ms | ActiveRecord: 7.6ms | Allocations: 2321)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 15:59:43 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"soap, meat", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"ht", "order"=>{}}
+[31mUnpermitted parameters: :name, :id_number, :phone_number, :vehicle_registration, :status, :profile_picture, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf82dcb78>, params: {"name"=>"George Chesire", "id_number"=>"34", "phone_number"=>"soap, meat", "vehicle_registration"=>"23", "status"=>"working", "profile_picture"=>"ht", "controller"=>"orders", "action"=>"create", "order"=>{}} }[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 3513)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 15:59:53 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf84ac4a8>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 9ms (Views: 1.0ms | ActiveRecord: 0.4ms | Allocations: 3460)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 16:00:00 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}}
+[31mUnpermitted parameters: :merchandiser, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf85fe680>, params: {"customer_name"=>"George Chesire", "merchandiser"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 1667)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 16:00:21 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efe08a1ab28>, params: {"customer_name"=>"George Chesire", "merchandiser"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}} }[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.7ms | Allocations: 4175)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Merchandiser(#132440) expected, got 1 which is an instance of Integer(#2420)):
+  
+app/controllers/orders_controller.rb:17:in `create'
+Started POST "/orders" for ::1 at 2023-07-25 16:02:10 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameters: :merchandiser_id, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efe04838548>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1967)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 16:02:26 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efe04b466b8>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 20ms (Views: 1.4ms | ActiveRecord: 2.7ms | Allocations: 8664)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 16:03:19 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf82062d0>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 18ms (Views: 1.0ms | ActiveRecord: 2.1ms | Allocations: 8666)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 16:03:57 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.0ms | Allocations: 2129)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/orders_controller.rb:17:in `create'
+Started POST "/orders" for ::1 at 2023-07-25 19:02:14 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.4ms | Allocations: 2111)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/orders_controller.rb:17:in `create'
+Started POST "/orders" for ::1 at 2023-07-25 19:02:34 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf8174150>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 15ms (Views: 0.9ms | ActiveRecord: 1.6ms | Allocations: 8674)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:02:48 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameters: :date, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdfc0d25b8>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 16ms (Views: 0.9ms | ActiveRecord: 1.8ms | Allocations: 8635)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:03:14 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf03ea838>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 18ms (Views: 0.8ms | ActiveRecord: 2.3ms | Allocations: 8662)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:03:38 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdfc3b2698>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 16ms (Views: 0.8ms | ActiveRecord: 1.9ms | Allocations: 8667)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:03:45 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf80ef6a8>, params: {"customer_name"=>"George Chesire", "merchandiser"=>1, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}} }[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 364)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Merchandiser(#202360) expected, got 1 which is an instance of Integer(#2420)):
+  
+app/controllers/orders_controller.rb:17:in `create'
+Started POST "/orders" for ::1 at 2023-07-25 19:04:01 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{}, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}}
+[31mUnpermitted parameters: :merchandiser, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf04a7f78>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{}, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1684)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:04:17 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}}
+[31mUnpermitted parameters: :merchandiser, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007efdf41e0390>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 1682)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:58:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser, :products_ordered, :date, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f71548c8490>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 28ms (Views: 1.2ms | ActiveRecord: 0.6ms | Allocations: 45910)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:58:28 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f714c15aff8>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 8ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 7606)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:58:48 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/03/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/03/2005", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f715000c080>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/03/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/03/2005", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 2923)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:58:57 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/03/205", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/03/205", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7164017ae8>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/03/205", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/03/205", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 2860)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:59:03 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"205", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"205", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f715800cc08>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"205", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"205", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 3450)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:59:09 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/205", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/205", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f71546fc3c8>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/205", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/205", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 3436)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:59:17 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/0/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/0/2005", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f714c2cfa00>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/0/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/0/2005", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 3437)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:59:22 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7150067548>, params: {"customer_name"=>"George Chesire", "merchandiser"=>{"id"=>1}, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 2849)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:59:41 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f715410a3c0>, params: {"customer_name"=>"George Chesire", "merchandiser"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working"}} }[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms | Allocations: 4144)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Merchandiser(#36040) expected, got 1 which is an instance of Integer(#2420)):
+  
+app/controllers/orders_controller.rb:17:in `create'
+Started POST "/orders" for ::1 at 2023-07-25 19:59:48 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser_id, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7154ae3c70>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 3138)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 19:59:57 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7154b17b60>, params: {"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 2839)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 20:00:34 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7168d3bdd8>, params: {"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 7533)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 20:00:41 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser_id, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7154dd01b8>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 3ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 3484)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 20:00:51 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :merchandiser_id, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7168f70158>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}} }[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 3436)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 20:01:04 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f714c0f3330>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 18ms (Views: 1.4ms | ActiveRecord: 1.5ms | Allocations: 11733)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 20:02:45 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}}
+[31mUnpermitted parameters: :customer_name, :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7150045330>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 5ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 4640)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 20:05:20 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}}
+[31mUnpermitted parameters: :products_ordered, :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7150096258>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 10ms (Views: 1.0ms | ActiveRecord: 1.0ms | Allocations: 9291)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 20:07:22 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}}
+[31mUnpermitted parameters: :location, :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7168a584e0>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 11ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 8674)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 20:07:35 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f7154d2b3c0>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 10ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 8094)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-07-25 21:13:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-07-25 21:13:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddLocationToOrders (20230725122008)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aorders" ("id" integer NOT NULL PRIMARY KEY, "customer_name" varchar DEFAULT NULL, "products_ordered" varchar DEFAULT NULL, "date" date DEFAULT NULL, "merchandiser_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "location" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "tindex_aorders_on_merchandiser_id" ON "aorders" ("merchandiser_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aorders" ("id","customer_name","products_ordered","date","merchandiser_id","created_at","updated_at","location")
+                     SELECT "id","customer_name","products_ordered","date","merchandiser_id","created_at","updated_at","location" FROM "orders"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer NOT NULL PRIMARY KEY, "customer_name" varchar DEFAULT NULL, "products_ordered" varchar DEFAULT NULL, "date" date DEFAULT NULL, "merchandiser_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8a4558a02c"
+FOREIGN KEY ("merchandiser_id")
+  REFERENCES "merchandisers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_merchandiser_id" ON "orders" ("merchandiser_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "orders" ("id","customer_name","products_ordered","date","merchandiser_id","created_at","updated_at")
+                     SELECT "id","customer_name","products_ordered","date","merchandiser_id","created_at","updated_at" FROM "aorders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "aorders"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230725122008"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20230725094555)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "orders"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230725094555"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20230725094555)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_name" varchar, "products_ordered" varchar, "date" date, "merchandiser_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_8a4558a02c"
+FOREIGN KEY ("merchandiser_id")
+  REFERENCES "merchandisers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_merchandiser_id" ON "orders" ("merchandiser_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230725094555"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddLocationToOrders (20230725122008)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "orders" ADD "location" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230725122008"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/orders" for ::1 at 2023-07-25 21:29:01 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f92e88d3cb8>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>"1", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>"1", "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 31ms (Views: 0.6ms | ActiveRecord: 1.4ms | Allocations: 48374)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 21:29:08 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>1, "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f92dc0152e0>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>1, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 2890)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-25 21:29:18 +0300
+Processing by MerchandisersController#index as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>1, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "merchandiser"=>{}}
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.1ms | Allocations: 16493)
+
+
+Started POST "/merchandisers" for ::1 at 2023-07-25 21:29:27 +0300
+Processing by MerchandisersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "merchandiser"=>{}}
+[31mUnpermitted parameters: :customer_name, :merchandiser_id, :products_ordered, :date, :location, :merchandiser. Context: { controller: MerchandisersController, action: create, request: #<ActionDispatch::Request:0x00007f92f0016f50>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"merchandisers", "action"=>"create", "merchandiser"=>{}} }[0m
+Completed 422 Unprocessable Entity in 4ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 4544)
+
+
+Started POST "/orders" for ::1 at 2023-07-25 21:29:36 +0300
+Processing by OrdersController#create as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>2, "location"=>"working"}}
+[31mUnpermitted parameter: :order. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00007f92e4017470>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"create", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat", "date"=>"23/01/2005", "merchandiser_id"=>2, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "George Chesire"], ["products_ordered", "soap, meat"], ["date", "2005-01-23"], ["merchandiser_id", 2], ["created_at", "2023-07-25 18:29:36.617076"], ["updated_at", "2023-07-25 18:29:36.617076"], ["location", "working"]]
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:17:in `create'
+Completed 201 Created in 15ms (Views: 0.4ms | ActiveRecord: 8.4ms | Allocations: 3355)
+
+
+Started PATCH "/orders" for ::1 at 2023-07-25 21:32:57 +0300
+  
+ActionController::RoutingError (No route matches [PATCH] "/orders"):
+  
+Started PATCH "/orders/1" for ::1 at 2023-07-25 21:33:18 +0300
+Processing by OrdersController#update as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat, milk", "date"=>"23/01/2005", "location"=>"working", "id"=>"1", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat, milk", "date"=>"23/01/2005", "merchandiser_id"=>2, "location"=>"working"}}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:22:in `update'
+[31mUnpermitted parameters: :id, :order. Context: { controller: OrdersController, action: update, request: #<ActionDispatch::Request:0x00007f92e8f18600>, params: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat, milk", "date"=>"23/01/2005", "location"=>"working", "controller"=>"orders", "action"=>"update", "id"=>"1", "order"=>{"customer_name"=>"George Chesire", "products_ordered"=>"soap, meat, milk", "date"=>"23/01/2005", "merchandiser_id"=>2, "location"=>"working"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:23:in `update'
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:23:in `update'
+  [1m[36mOrder Update (0.2ms)[0m  [1m[33mUPDATE "orders" SET "products_ordered" = ?, "updated_at" = ? WHERE "orders"."id" = ?[0m  [["products_ordered", "soap, meat, milk"], ["updated_at", "2023-07-25 18:33:18.507780"], ["id", 1]]
+  ↳ app/controllers/orders_controller.rb:23:in `update'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:23:in `update'
+Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 7.3ms | Allocations: 3836)
+
+
