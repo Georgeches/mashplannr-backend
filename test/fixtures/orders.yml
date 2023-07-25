@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  customer_name: MyString
+  products_ordered: MyString
+  date: 2023-07-25
+  merchandiser: one
+
+two:
+  customer_name: MyString
+  products_ordered: MyString
+  date: 2023-07-25
+  merchandiser: two
