@@ -5,6 +5,8 @@ ruby "3.0.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
+gem 'jwt'
+gem 'bcrypt'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"

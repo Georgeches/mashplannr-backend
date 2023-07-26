@@ -1,4 +1,5 @@
 class MerchandisersController < ApplicationController
+    
     def index
         merchandisers = Merchandiser.all
         render json: merchandisers
@@ -35,6 +36,6 @@ class MerchandisersController < ApplicationController
 
     private
     def merchandiser_params
-        params.permit(:name, :id_number, :phone_number, :vehicle_registration, :status, :profile_picture)
+        params.permit(:name, :password, :id_number, :phone_number, :vehicle_registration, :status, :profile_picture)
     end
 end

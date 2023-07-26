@@ -1094,3 +1094,453 @@ Processing by OrdersController#update as */*
 Completed 200 OK in 14ms (Views: 0.4ms | ActiveRecord: 7.3ms | Allocations: 3836)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordToMerchandisers (20230725184522)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "merchandisers" ADD "password" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230725184522"]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230725190053)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password" varchar, "user_type" varchar, "admin_id" integer NOT NULL, "merchandiser_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_1694bfe639"
+FOREIGN KEY ("admin_id")
+  REFERENCES "admins" ("id")
+, CONSTRAINT "fk_rails_8f7eb65323"
+FOREIGN KEY ("merchandiser_id")
+  REFERENCES "merchandisers" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_users_on_admin_id" ON "users" ("admin_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_users_on_merchandiser_id" ON "users" ("merchandiser_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230725190053"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admins" for ::1 at 2023-07-25 22:13:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#index as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat, milk", "date"=>"23/01/2005", "location"=>"working", "admin"=>{}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms | Allocations: 4564)
+
+
+  
+NameError (uninitialized constant ApplicationController::JWT):
+  
+app/controllers/application_controller.rb:27:in `rescue in authenticate_user'
+app/controllers/application_controller.rb:22:in `authenticate_user'
+app/controllers/application_controller.rb:9:in `authenticate_admin'
+Started GET "/admins" for ::1 at 2023-07-25 22:15:23 +0300
+  
+LoadError (cannot load such file -- jwt):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/admins_controller.rb:1:in `<main>'
+Started GET "/admins" for ::1 at 2023-07-25 22:16:45 +0300
+  
+LoadError (cannot load such file -- jwt):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/admins_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2023-07-26 09:57:28 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/3.0.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/3.0.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 826)
+Completed 200 OK in 13ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 7609)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-07-26 09:58:44 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Admin 1"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 07:04:27.212164"], ["updated_at", "2023-07-26 07:04:27.212164"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.2ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Admin 2"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 07:04:27.216375"], ["updated_at", "2023-07-26 07:04:27.216375"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (0.3ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Doe"], ["id_number", "MID12345"], ["phone_number", "1234567890"], ["vehicle_registration", "ABC123"], ["status", "Active"], ["profile_picture", "https://th.bing.com/th/id/OIP.xmoqMw4IxOLVAks0X8JBJgHaHx?w=176&h=185&c=7&r=0&o=5&pid=1.7"], ["created_at", "2023-07-26 07:04:27.230762"], ["updated_at", "2023-07-26 07:04:27.230762"], ["password", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (0.3ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elon Musk"], ["id_number", "MID67890"], ["phone_number", "9876543210"], ["vehicle_registration", "XYZ789"], ["status", "Inactive"], ["profile_picture", "data:image/jpeg;base64,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"], ["created_at", "2023-07-26 07:04:27.234648"], ["updated_at", "2023-07-26 07:04:27.234648"], ["password", "[FILTERED]"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 1"], ["products_ordered", "Product A, Product B"], ["date", "2023-07-26"], ["merchandiser_id", 2], ["created_at", "2023-07-26 07:04:27.255984"], ["updated_at", "2023-07-26 07:04:27.255984"], ["location", "Location A"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 2"], ["products_ordered", "Product C, Product D"], ["date", "2023-07-25"], ["merchandiser_id", 4], ["created_at", "2023-07-26 07:04:27.261651"], ["updated_at", "2023-07-26 07:04:27.261651"], ["location", "Location B"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/admins" for ::1 at 2023-07-26 10:04:36 +0300
+Processing by AdminsController#index as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat, milk", "date"=>"23/01/2005", "location"=>"working", "admin"=>{}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms | Allocations: 4404)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/application_controller.rb:25:in `authenticate_user'
+app/controllers/application_controller.rb:10:in `authenticate_admin'
+Started GET "/admins" for ::1 at 2023-07-26 10:05:12 +0300
+Processing by AdminsController#index as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat, milk", "date"=>"23/01/2005", "location"=>"working", "admin"=>{}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 1.1ms | Allocations: 16104)
+
+
+Started GET "/admins/login" for ::1 at 2023-07-26 10:05:17 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"customer_name"=>"George Chesire", "merchandiser_id"=>2, "products_ordered"=>"soap, meat, milk", "date"=>"23/01/2005", "location"=>"working", "id"=>"login", "admin"=>{}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:9:in `show'
+Completed 404 Not Found in 4ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1717)
+
+
+Started GET "/admins/login" for ::1 at 2023-07-26 10:06:03 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"name"=>"Admin 1", "id"=>"login", "admin"=>{"name"=>"Admin 1"}}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:9:in `show'
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 540)
+
+
+Started GET "/admins/login" for ::1 at 2023-07-26 10:06:40 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "id"=>"login", "admin"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:9:in `show'
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 514)
+
+
+Started GET "/admins/login" for ::1 at 2023-07-26 10:08:31 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "id"=>"login", "admin"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:9:in `show'
+Completed 404 Not Found in 1ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 998)
+
+
+Started GET "/admins/login" for ::1 at 2023-07-26 10:08:33 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "id"=>"login", "admin"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:9:in `show'
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 507)
+
+
+Started GET "/admins/1" for ::1 at 2023-07-26 10:08:43 +0300
+Processing by AdminsController#show as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "id"=>"1", "admin"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admins_controller.rb:9:in `show'
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 513)
+
+
+Started POST "/admins/login" for ::1 at 2023-07-26 10:09:06 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/admins/login"):
+  
+Started POST "/admin/login" for ::1 at 2023-07-26 10:09:23 +0300
+Processing by AdminAuthenticationController#login as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "admin_authentication"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."name" = ? LIMIT ?[0m  [["name", "Admin 1"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_authentication_controller.rb:3:in `login'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms | Allocations: 4127)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Admin id: 2, name: "Admin 1", password: [FILTERED], created_at: "2023-07-26 07:04:27.212164000 +0000", updated_at: "2023-07-26 07:04:27.212164000 +0000">):
+  
+app/controllers/admin_authentication_controller.rb:5:in `login'
+Started POST "/admin/login" for ::1 at 2023-07-26 10:11:48 +0300
+Processing by AdminAuthenticationController#login as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "admin_authentication"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 6ms (Allocations: 2540)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/admin.rb:2:in `<class:Admin>'
+app/models/admin.rb:1:in `<main>'
+app/controllers/admin_authentication_controller.rb:3:in `login'
+Started POST "/admin/login" for ::1 at 2023-07-26 10:13:29 +0300
+Processing by AdminAuthenticationController#login as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "admin_authentication"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 4ms (Allocations: 1766)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/admin.rb:2:in `<class:Admin>'
+app/models/admin.rb:1:in `<main>'
+app/controllers/admin_authentication_controller.rb:3:in `login'
+Started POST "/admin/login" for ::1 at 2023-07-26 10:17:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminAuthenticationController#login as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "admin_authentication"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."name" = ? LIMIT ?[0m  [["name", "Admin 1"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_authentication_controller.rb:3:in `login'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.6ms | Allocations: 41418)
+
+
+  
+NoMethodError (undefined method `password_digest' for #<Admin id: 2, name: "Admin 1", password: [FILTERED], created_at: "2023-07-26 07:04:27.212164000 +0000", updated_at: "2023-07-26 07:04:27.212164000 +0000">
+Did you mean?  password):
+  
+app/controllers/admin_authentication_controller.rb:5:in `login'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToAdmins (20230726072055)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230726072055"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (9.9ms)[0m  [1m[31mDELETE FROM "admins";
+DELETE FROM "merchandisers";
+DELETE FROM "orders";
+DELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Admin 1"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 07:21:59.217662"], ["updated_at", "2023-07-26 07:21:59.217662"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Admin 2"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 07:21:59.413832"], ["updated_at", "2023-07-26 07:21:59.413832"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToMerchandisers (20230726072343)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "merchandisers" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230726072343"]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (6.5ms)[0m  [1m[31mDELETE FROM "admins";
+DELETE FROM "merchandisers";
+DELETE FROM "orders";
+DELETE FROM "users"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Admin 1"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 07:23:56.751457"], ["updated_at", "2023-07-26 07:23:56.751457"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Admin 2"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 07:23:56.949767"], ["updated_at", "2023-07-26 07:23:56.949767"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (0.3ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Doe"], ["id_number", "MID12345"], ["phone_number", "1234567890"], ["vehicle_registration", "ABC123"], ["status", "Active"], ["profile_picture", "https://th.bing.com/th/id/OIP.xmoqMw4IxOLVAks0X8JBJgHaHx?w=176&h=185&c=7&r=0&o=5&pid=1.7"], ["created_at", "2023-07-26 07:23:57.161831"], ["updated_at", "2023-07-26 07:23:57.161831"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (7.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (0.2ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password", "password_digest") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elon Musk"], ["id_number", "MID67890"], ["phone_number", "9876543210"], ["vehicle_registration", "XYZ789"], ["status", "Inactive"], ["profile_picture", "data:image/jpeg;base64,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"], ["created_at", "2023-07-26 07:23:57.358555"], ["updated_at", "2023-07-26 07:23:57.358555"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 1"], ["products_ordered", "Product A, Product B"], ["date", "2023-07-26"], ["merchandiser_id", 5], ["created_at", "2023-07-26 07:23:57.388965"], ["updated_at", "2023-07-26 07:23:57.388965"], ["location", "Location A"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 2"], ["products_ordered", "Product C, Product D"], ["date", "2023-07-25"], ["merchandiser_id", 6], ["created_at", "2023-07-26 07:23:57.394826"], ["updated_at", "2023-07-26 07:23:57.394826"], ["location", "Location B"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/admin/login" for ::1 at 2023-07-26 10:24:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminAuthenticationController#login as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "admin_authentication"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."name" = ? LIMIT ?[0m  [["name", "Admin 1"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_authentication_controller.rb:3:in `login'
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.2ms | Allocations: 5202)
+
+
+  
+NoMethodError (undefined method `generate_jwt' for #<Admin id: 6, name: "Admin 1", password: nil, created_at: "2023-07-26 07:23:56.751457000 +0000", updated_at: "2023-07-26 07:23:56.751457000 +0000">):
+  
+app/controllers/admin_authentication_controller.rb:6:in `login'
+Started POST "/admin/login" for ::1 at 2023-07-26 10:26:54 +0300
+Processing by AdminAuthenticationController#login as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "admin_authentication"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT "admins".* FROM "admins" WHERE "admins"."name" = ? LIMIT ?[0m  [["name", "Admin 1"], ["LIMIT", 1]]
+  ↳ app/controllers/admin_authentication_controller.rb:3:in `login'
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 0.9ms | Allocations: 16201)
+
+
+  
+JWT::DecodeError (OpenSSL 3.0 does not support nil or empty hmac_secret):
+  
+app/models/admin.rb:9:in `generate_jwt'
+app/controllers/admin_authentication_controller.rb:6:in `login'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToMerchandisers (20230726072343)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "amerchandisers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "id_number" varchar DEFAULT NULL, "phone_number" varchar DEFAULT NULL, "vehicle_registration" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "profile_picture" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "amerchandisers" ("id","name","id_number","phone_number","vehicle_registration","status","profile_picture","created_at","updated_at","password","password_digest")
+                     SELECT "id","name","id_number","phone_number","vehicle_registration","status","profile_picture","created_at","updated_at","password","password_digest" FROM "merchandisers"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "merchandisers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "merchandisers" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "id_number" varchar DEFAULT NULL, "phone_number" varchar DEFAULT NULL, "vehicle_registration" varchar DEFAULT NULL, "status" varchar DEFAULT NULL, "profile_picture" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "merchandisers" ("id","name","id_number","phone_number","vehicle_registration","status","profile_picture","created_at","updated_at","password")
+                     SELECT "id","name","id_number","phone_number","vehicle_registration","status","profile_picture","created_at","updated_at","password" FROM "amerchandisers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "amerchandisers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230726072343"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToAdmins (20230726072055)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aadmins" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "password" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "password_digest" varchar DEFAULT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "aadmins" ("id","name","password","created_at","updated_at","password_digest")
+                     SELECT "id","name","password","created_at","updated_at","password_digest" FROM "admins"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "admins"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "admins" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "password" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "admins" ("id","name","password","created_at","updated_at")
+                     SELECT "id","name","password","created_at","updated_at" FROM "aadmins"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "aadmins"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230726072055"]]
+  [1m[36mTRANSACTION (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230725190053)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Delete All (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20230725190053"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (10.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "merchandisers";
+DELETE FROM "admins"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Admin 1"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 10:21:12.427347"], ["updated_at", "2023-07-26 10:21:12.427347"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Admin 2"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 10:21:12.432254"], ["updated_at", "2023-07-26 10:21:12.432254"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (0.2ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Doe"], ["id_number", "MID12345"], ["phone_number", "1234567890"], ["vehicle_registration", "ABC123"], ["status", "Active"], ["profile_picture", "https://th.bing.com/th/id/OIP.xmoqMw4IxOLVAks0X8JBJgHaHx?w=176&h=185&c=7&r=0&o=5&pid=1.7"], ["created_at", "2023-07-26 10:21:12.447806"], ["updated_at", "2023-07-26 10:21:12.447806"], ["password", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (0.3ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elon Musk"], ["id_number", "MID67890"], ["phone_number", "9876543210"], ["vehicle_registration", "XYZ789"], ["status", "Inactive"], ["profile_picture", "data:image/jpeg;base64,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"], ["created_at", "2023-07-26 10:21:12.452427"], ["updated_at", "2023-07-26 10:21:12.452427"], ["password", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 1"], ["products_ordered", "Product A, Product B"], ["date", "2023-07-26"], ["merchandiser_id", 1], ["created_at", "2023-07-26 10:21:12.474339"], ["updated_at", "2023-07-26 10:21:12.474339"], ["location", "Location A"]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.1ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mOrder Create (0.2ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 2"], ["products_ordered", "Product C, Product D"], ["date", "2023-07-25"], ["merchandiser_id", 2], ["created_at", "2023-07-26 10:21:12.481099"], ["updated_at", "2023-07-26 10:21:12.481099"], ["location", "Location B"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/admins" for ::1 at 2023-07-26 13:21:20 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"Admin 1", "password"=>"[FILTERED]", "admin"=>{"name"=>"Admin 1", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/admins_controller.rb:18:in `create'
+  [1m[36mAdmin Create (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at", "password_digest") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Admin 1"], ["password", "[FILTERED]"], ["created_at", "2023-07-26 10:21:20.385608"], ["updated_at", "2023-07-26 10:21:20.385608"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/admins_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/admins_controller.rb:18:in `create'
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.7ms | Allocations: 3969)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: table admins has no column named password_digest):
+  
+app/controllers/admins_controller.rb:18:in `create'
+Started GET "/admins" for ::1 at 2023-07-26 13:21:38 +0300
+Processing by AdminsController#index as */*
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1298)
+
+
+Started GET "/admins" for ::1 at 2023-07-26 13:21:41 +0300
+Processing by AdminsController#index as */*
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:5:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 837)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-26 13:21:48 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 14.4ms | ActiveRecord: 0.6ms | Allocations: 19553)
+
+
+Started GET "/orders" for ::1 at 2023-07-26 13:21:54 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 28.0ms | ActiveRecord: 1.4ms | Allocations: 19149)
+
+
