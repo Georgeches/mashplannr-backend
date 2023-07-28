@@ -1,4 +1,5 @@
 # Seed data for Admins
+puts 'seeeding.....'
 Admin.create(name: 'Admin 1', password: 'admin_password_1')
 Admin.create(name: 'Admin 2', password: 'admin_password_2')
 
@@ -37,3 +38,5 @@ Order.create(
   location: 'Location B',
   merchandiser_id: Merchandiser.last.id
 )
+
+puts 'seeding done'

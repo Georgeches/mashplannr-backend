@@ -1,12 +1,12 @@
 class MerchandisersController < ApplicationController
-    
+     before_action :authenticate_user, only: [:show]
     def index
         merchandisers = Merchandiser.all
         render json: merchandisers
     end
     
     def show
-        merchandiser = Merchandiser.find_by(id: params[:id])
+        merchandiser = Merchandiser.find_by(id: session[:merchandiser_id])
         if merchandiser
             render json: merchandiser
         else
@@ -16,8 +16,14 @@ class MerchandisersController < ApplicationController
 
     def create
         merchandiser = Merchandiser.create!(merchandiser_params)
+       
+    if user.valid?
+      session[:user_id] = merchandiser.id
+      render json: { id: user.id, username: user.username, address: user.address, phone: user.phone }, status: :created
+    else
         render json: merchandiser, status: :created
     end
+end
 
     def update
         merchandiser = Merchandiser.find_by(id: params[:id])
