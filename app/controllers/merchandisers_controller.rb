@@ -53,3 +53,4 @@ class MerchandisersController < ApplicationController
     Merchandiser.find_by(id: session[:merchandiser_id])
   end
 end
+
