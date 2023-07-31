@@ -1934,3 +1934,1974 @@ Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 1425)
   
 ActionController::RoutingError (No route matches [GET] "/me"):
   
+Started GET "/" for 127.0.0.1 at 2023-07-31 11:58:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 117.8ms | Allocations: 694)
+Completed 200 OK in 965ms (Views: 240.3ms | ActiveRecord: 0.0ms | Allocations: 7980)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-31 11:59:41 +0300
+Started GET "/orders" for ::1 at 2023-07-31 11:59:41 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 11:59:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Processing by OrdersController#index as */*
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 416ms (Views: 120.9ms | ActiveRecord: 6.4ms | Allocations: 18247)
+
+
+Completed 200 OK in 409ms (Views: 193.8ms | ActiveRecord: 4.6ms | Allocations: 19061)
+
+
+Started GET "/orders" for ::1 at 2023-07-31 12:02:34 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:02:34 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:02:34 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.7ms | Allocations: 1398)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.7ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.7ms | Allocations: 1481)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:03:54 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:03:54 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:03:54 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Processing by MerchandisersController#index as */*
+Processing by OrdersController#index as */*
+  [1m[36mMerchandiser Load (1.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 289ms (Views: 112.9ms | ActiveRecord: 5.5ms | Allocations: 19208)
+
+
+Completed 200 OK in 301ms (Views: 114.4ms | ActiveRecord: 5.8ms | Allocations: 20209)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:04:55 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:04:55 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:04:55 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.5ms | Allocations: 1531)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.5ms | Allocations: 1359)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/orders" for ::1 at 2023-07-31 12:05:04 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:05:05 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:05:05 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.3ms | Allocations: 1346)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.8ms | Allocations: 1472)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/orders" for ::1 at 2023-07-31 12:05:09 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:05:09 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:05:09 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.5ms | Allocations: 1353)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.5ms | Allocations: 1483)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:05:12 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:05:12 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:05:12 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.8ms | Allocations: 1484)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.6ms | Allocations: 1359)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/orders" for ::1 at 2023-07-31 12:05:29 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:05:29 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:05:29 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 1349)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.8ms | Allocations: 1483)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:07:26 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:07:26 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:07:27 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.7ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.7ms | Allocations: 1476)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.7ms | Allocations: 1344)
+
+
+Started GET "/orders" for ::1 at 2023-07-31 12:07:32 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:07:33 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:07:33 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.8ms | Allocations: 1351)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.5ms | Allocations: 1472)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/orders" for ::1 at 2023-07-31 12:07:48 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:07:48 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:07:48 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (1.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 1.2ms | Allocations: 1363)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.5ms | Allocations: 1484)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:07:51 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:07:51 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:07:52 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 1474)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.5ms | Allocations: 1348)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/orders" for ::1 at 2023-07-31 12:08:01 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:08:01 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:08:02 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.5ms | Allocations: 1351)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.8ms | Allocations: 1483)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:08:04 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:08:04 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:08:04 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.6ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.6ms | Allocations: 1487)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 1.1ms | Allocations: 1348)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/orders" for ::1 at 2023-07-31 12:08:08 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:08:08 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:08:08 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.5ms | Allocations: 1350)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 1472)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-31 12:08:10 +0300
+  
+ActionController::RoutingError (No route matches [POST] "/login"):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:08:15 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:08:15 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:08:15 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.4ms | Allocations: 1469)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.5ms | Allocations: 1344)
+
+
+Started GET "/orders" for ::1 at 2023-07-31 12:08:20 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:08:20 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:08:20 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.5ms | Allocations: 1350)
+
+
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.7ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.7ms | Allocations: 1472)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:10:23 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:10:23 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:10:23 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.6ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.6ms | Allocations: 1484)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.8ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.8ms | Allocations: 1344)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:13:06 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:13:07 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:13:07 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 1473)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.4ms | Allocations: 1360)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started GET "/merchandisers" for ::1 at 2023-07-31 12:13:09 +0300
+Started GET "/orders" for ::1 at 2023-07-31 12:13:10 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 12:13:10 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.5ms | Allocations: 1473)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 1348)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/me"):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-31 12:53:17 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"id_number"=>"MID12345", "password"=>"[FILTERED]", "session"=>{"id_number"=>"MID12345", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."merchandisername" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.9ms | Allocations: 3366)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: merchandisers.merchandisername):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 12:54:40 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"id_number"=>"MID12345", "password"=>"[FILTERED]", "session"=>{"id_number"=>"MID12345", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id_number" = ? LIMIT ?[0m  [["id_number", "MID12345"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.7ms | Allocations: 5221)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Merchandiser id: 1, name: "John Doe", id_number: "MID12345", phone_number: "1234567890", vehicle_registration: "ABC123", status: "Active", profile_picture: "https://th.bing.com/th/id/OIP.xmoqMw4IxOLVAks0X8JB...", created_at: "2023-07-26 10:21:12.447806000 +0000", updated_at: "2023-07-26 10:21:12.447806000 +0000", password: [FILTERED]>):
+  
+app/controllers/sessions_controller.rb:4:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 12:57:38 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"id_number"=>"MID12345", "password"=>"[FILTERED]", "session"=>{"id_number"=>"MID12345", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id_number" = ? LIMIT ?[0m  [["id_number", "MID12345"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.6ms | Allocations: 5055)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Merchandiser id: 1, name: "John Doe", id_number: "MID12345", phone_number: "1234567890", vehicle_registration: "ABC123", status: "Active", profile_picture: "https://th.bing.com/th/id/OIP.xmoqMw4IxOLVAks0X8JB...", created_at: "2023-07-26 10:21:12.447806000 +0000", updated_at: "2023-07-26 10:21:12.447806000 +0000", password: [FILTERED]>):
+  
+app/controllers/sessions_controller.rb:4:in `create'
+Started GET "/ws" for ::1 at 2023-07-27 10:26:52 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/" for 127.0.0.1 at 2023-07-27 10:27:01 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 48.3ms | Allocations: 282)
+Completed 200 OK in 130ms (Views: 52.0ms | ActiveRecord: 0.0ms | Allocations: 2899)
+
+
+Started GET "/ws" for ::1 at 2023-07-27 10:27:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-07-27 10:27:43 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/orders" for 127.0.0.1 at 2023-07-27 10:28:20 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 218ms (Views: 80.3ms | ActiveRecord: 4.5ms | Allocations: 9650)
+
+
+Started GET "/ws" for ::1 at 2023-07-27 10:28:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/merchandisers" for 127.0.0.1 at 2023-07-27 10:29:20 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:5:in `index'
+Completed 200 OK in 133ms (Views: 31.6ms | ActiveRecord: 2.9ms | Allocations: 8088)
+
+
+Started GET "/admins" for 127.0.0.1 at 2023-07-27 10:30:27 +0300
+Processing by AdminsController#index as */*
+  [1m[36mAdmin Load (0.5ms)[0m  [1m[34mSELECT "admins".* FROM "admins"[0m
+  ↳ app/controllers/admins_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 19.9ms | ActiveRecord: 3.2ms | Allocations: 3062)
+
+
+Started GET "/ws" for ::1 at 2023-07-27 10:30:57 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-07-27 10:35:14 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/static/js/bundle.js" for ::1 at 2023-07-27 11:47:17 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/static/js/bundle.js"):
+  
+Started GET "/manifest.json" for ::1 at 2023-07-27 11:47:18 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/manifest.json"):
+  
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToMerchandesisers (20230728130238)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.7ms)[0m  [1m[35mALTER TABLE "merchandisers" ADD "password_digest" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230728130238"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToMerchandisers (20230728130742)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "merchandisers" ADD "email" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230728130742"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (1.6ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Admin 1"], ["password", "[FILTERED]"], ["created_at", "2023-07-28 13:11:14.285220"], ["updated_at", "2023-07-28 13:11:14.285220"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (1.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Admin 2"], ["password", "[FILTERED]"], ["created_at", "2023-07-28 13:11:14.297137"], ["updated_at", "2023-07-28 13:11:14.297137"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (7.5ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password", "password_digest", "email") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Doe"], ["id_number", "MID12345"], ["phone_number", "1234567890"], ["vehicle_registration", "ABC123"], ["status", "Active"], ["profile_picture", "https://th.bing.com/th/id/OIP.xmoqMw4IxOLVAks0X8JBJgHaHx?w=176&h=185&c=7&r=0&o=5&pid=1.7"], ["created_at", "2023-07-28 13:11:14.864011"], ["updated_at", "2023-07-28 13:11:14.864011"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["email", nil]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (6.8ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password", "password_digest", "email") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elon Musk"], ["id_number", "MID67890"], ["phone_number", "9876543210"], ["vehicle_registration", "XYZ789"], ["status", "Inactive"], ["profile_picture", "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAsJCQcJCQcJCQkJCwkJCQkJCQsJCwsMCwsLDA0QDBEODQ4MEhkSJRodJR0ZHxwpKRYlNzU2GioyPi0pMBk7IRP/2wBDAQcICAsJCxULCxUsHRkdLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCwsLCz/wAARCAC0AM4DASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAECAwUEBgf/xAA9EAABBAEDAQYEBQIEBAcAAAABAAIDESEEEjFBBRMiUWFxUoGRoQYUMrHBQtEj4fDxFTOCkgckQ2JjcrL/xAAaAQACAwEBAAAAAAAAAAAAAAAAAQIDBAUG/8QAJhEAAgIBBAICAgMBAAAAAAAAAAECAxEEEiFREzEFMkFxM0JhIv/aAAwDAQACEQMRAD8A8YjKW+P4h9Uu8j+IL1eUcDBNNQ7yP4h9U98fxNRlCwySMqPeR/E36p95F8TfkU8oMMllNREkXxD6o7yP4m/VSTQYZMJgOPAJ9sqsSR/EPqrYJHPkDYfE85oNa6gOT4sBEpKKbJRi28AGSuvYx7q+BrnV70Fa3R6tzd3duAsDx00n2BXUW6jAc18jhlzi5wjs9BgAquVmqLaLzC7+nvpRuA9GNP7LhWfKyTxBI60Pj44zJs5jpdS3PdurNV6KstLSQ4UR0OF0CIsDjJqp9Q+62xAsI87EjgUgC8NfunY04k3W5+2+KcEofLS/vEcvjo/1ZRlNdX5fTkEs1Ld1A7HtLQM1yef9fKP5d15IAq7cWgUOetrfX8lRNcvBinobYvhZOfPmUK4wvaDZFeYII/18lQ57GEhzgCFtrvrs+ssmWdNkPsgKFHvYvjCO9i+Nv1VjwivDJIUO9i+IJd9F8YUdy7HtZNCh3sXxBHfQ/GEt0ew2vonRUgT5qrvoedwS7+H4gjdHsW19HF3I+Io7gfEfqrbTCzeGHRo8suyruB8R+qO4HmfqrkWU/DDoPLLsp7geZ+6O4HmfqrSSi01TDoXll2V9wPiP1S7kfEfqrvkhLww6JeSXYabRNnkawybW0XPdk7Wgc0Fot1ml0QfDpdNQ3EbpCTJI4cF5u/YWuNrpWt2xU18h2mQ8MFE/5qmaCSNzQ2Xc45L3uO5xPUNHTyXA1k1Kxwj6R2dNFxhufs7Zdbf/ADXy7qwyEt2tHPUUPouB2odYLZJLo2JHbht8gSK+yokDWGnDc4+TqcDXII/lTi0k8gsB9HzGR/CxYSNOW/R0smnc0NBAB8WL4Hl190OlnkHjc7wk4aQaLcYCiNHqowOTRJbQPXok/TSnO0m82OAUuCWJF51m0ta0kE1u3jORXX5qz8y5zSXu3Ai6qrGLHCznaaUkc/O6BHQFSMOpFNpxPtaMIXJ0DVBoNOwTx02uF8KJ7qYtFkPBNZ5FWq/ymqdvd3TztbudTSaA86U9GGiVrnCzfha7hwvIV1M9kkyFkXKOGR/LR82a4S/Lx+ZXXNHse4A2LO30HS8qlemhCucVJI4E5Si8ZKvy8fqjuI/VW5Qm6oL8Ffkl2V9xH6/VIQR+quykn4odB5JdlRgj9Uu4jV2UUUnVHoPJLsqTHCKQrSA0JJqQAjCaSBDTA3FoJqyBaSkwgFpPAIv2Sl64Jx98kpGSPY50bgGstzQaxfJs9eAqGiVpd3r3lxI32ecXR/lWanUuaTHGSB4bLcFxAsZ8guRkzrAs0DyTkknJXkJJ5eT0aa/BraHs12pe1xADBk8nA9V6jTaLTBophvjz9lk9lzjaAAMijZ8/Ur0kVUPI5v5LDdJnR08ETi07cAsZXXF3XmuodnaR4JMYvoQ0Ai1KIC6HIokkUM9F3xNa0AnJ6V7rMmzY0kZ0vY2jkad7RluHCsAdKGFxf8F0cM0e1jeD3g6ZAsL0Eglq9oAvGbA9XfwpxwWN1ADbi+c+asyyHBk/lIIsRsaMVgVVeS8Z2x2WdHLJNphUMhL3Rj+l3JofdfRJWZHpz50sHtfTO1GnnYyw6i5hHxNyFKqbUsMqtrUo5PBicS72kU5rQ4XzXUFQ6pMDgXl4/wARrnRk+l7gpL2mhTVKyeQ1jTseBITSWwxjKSaKQAkfdNACAyUn1QhCBjTSQgB0hCEDBCaKTBHPqQCGeZJH0zlRiiDjnH7+wV07bazj9V16KUbayBxVE+Zxheb1q22vB3NLzWjS7OLmSNBNnFBo4+Zyva6dhfGy64A/3Xn+ztHp42xSPaHSFt2eGn0tb8MjWgDoOFw7Xlndpg4rJpMZVHoPquuA8UbGRXkuOGRuxxcQ1oFknAHVW6XWaN7q7+NpJqnGnWfQqlIvfo1WsbIQ4jiv9FScMUG+yTHxBoo3YxRVneNocq5GdnBJG7a5vFYN8lZk7C1zjyBXstnV6nSwQyTy/pYOGi3OccBrR1J6LyWp1P4j1L3aiPRNh0rBubC+Role0WcjJs/L+VHbyTU+MHjtfCYNb2hESPBqpdtfC6nD91zYWh2xTtdJLRHfxaaejyC+JtgrPXuNH/BD9HjdX/NL9ghCAtRlYIQhIiJNFITAoQhASGNCEBAxp9Qkni0wBCaKSyNGo2PTS6ePTO07WENbJHO1jd53DJfIPFz7rilhOnO11W0g83Z81q9mFuobp4yLLWTQv620U9t+4XPrtJOwMc63ZeWmhkb3NGB7UvHXOUbZRn7yeyUIzpjZWuMI1dA8GGM+YB9VouD/AOg4Ix6E5wsrSAiGOqBDeDWPRbGiAmaMWaIeD/dc+bwzZXzFEI4GyPazUTOkN21mQDa65ezPwy7Oq1Glgcywds2wiskO2FUS6KfUbmklrW7QA29z2XZaS0jK6dR2R2ZrtPo4ZGysGmDtohZIC5rnDc15LSD73fqnDD9is3Y4Hp5NJ2c4N0chlhIG4EuJaDwRu6LeZIZITI04Iuz5LNdpYDFqX/lwHudua4eEMzmgDWfL/cminOyWG8beuMJZJKGVwS/Mtlkc4xySCKN0tRN3d3GxpJe4EgWfdYo7Y/Oy1pmTsi710W97I9jnCMSUQBYNEVnnHqt5jtUzxwsjFeBwZvbdCs0a+ypOkYWioIoYgdwZGd29xySaaAE+MFbTzx6PDfiFgZr2tGP/ACunJHvax1v/AIqYB2hpnCvHo47rzY97f7LAK9roXnTwf+Hj9asXzX+ghCXK1sxkkKITQRY0YQmPqmI5k1G0wUhjTtL5IQMFIKKdpiJIUbTBUWSNDsvUGDVwEUQ522i7aCSC2r9eFvTtldC+QsIjd3gAftEkTmuBG6vPPC8kL6Gj0I5B8163T9p6HXaZsc0jIZxGGSNeaDjwXNJx5Lz/AMpp3uV0F+z0fxepTrdE3+jijcW7vTJ/uFtdmODWEngmgb6rFipwLTduaB06LS0by2MbuQTXzHK4VyOzSz0cBY91OFnzs4WmyGMBu7IBurJHyWFo5m7iRkEdOvutkSgsH7lUx4LpLPoq7QlDIxkBpIFdAsWGZo1dg+E0DzkFd3abZpY4BGx0gbJumawjdtAwQCVgfntZBrG/mNHHDAHANeyQy2M0ZQWij7Wp4yThiCPVxkxaktFhssYcAQase66ZQHMNYx08/RY410urk00jWObE1km5z27XlxoAAeS6jrGNbTjWLycIfRW1zk8V+KwG6jRN693PZ/6wvOWtv8STGbXQkfpbpht9jI/NH2WIvZ/HLGmhk8b8g09RPAcISTW8wAkglCrEMKQUQpKaEcqkFE4TFoAdp59EilZKjkBp/wABLyTsJ7hgE8JIQ2MkKVkZAfHfG5t/VVCzxz0TkLoo3PcMgHa3qT5+yossjCL3FtcJSktpuad2yQDkNcWrZ0wZvb8JLbC8/v7uVj/6ZA0j3IBWvHKRseMtteLuWeT2dD4wbEekmw+F3W9v7rSY2RrAZHVQJoHquTTahoETuGuNG+l5vC1pI+9iDmFgLm0SRYB8wFmj/pocsM4YZmuPNEj1y3jlWP8A+Eiu/l0ZfwBI+LAJuslea13ZusbPUnaUoi3DD9PEYhm6cG7eeLvK0dNDqI4S3uux3HeHsJ7MmcaIsDeJwyvlfurklj2WNSxlLJ2T6zsaPds1mlbR2kNeKBHQVhWshh1EPfODXNbHu6O58I481lfkmza/SPnax+ojlsnYxkUDcvLYo4/CB8yfM+Wn2rr49BoNQ5gALGb6AwXE00H3JH3S25ajH2yq3/hZZ4HtqZs3aetLTbInt07K4qJoYQPnazkFznFznElziXOPm4myVFe7qr8dah0jw1s/JNz7YJ2kUlMqwSSSTTEO0wVFMFMWDnKY5RymgQFHRCEgBNJXM00787abXJIv/t5UZSjDmbwTjCU+IrJVfsrWRSvAIaQ0/wBTsD5LpZHp4uWuL+jngGj6NGFXPPGG3Tn1WcgcLm2/IJcVo31aJ+7GIhsVVk5tx6Cui4NRIX+H/wBp44yFeXuJrA8NEXjI9VyvFvvp5dVypzlN7pM6MYqKxE9VHC3U6eOgDccZFdQWg8qtsk+lJZKC6Img7qFLsGTvNLEP6oHOgcD5NNj7ELdk0kU7LaBuIuujqXPk8PDOnBZipIXZ00U8Xdh/TwmzVha+jmfGXRl4IxYPl7ryrtNPpnmSB2wg2Wm6PnYVo7TlaWud4JBW4OP3vgql155RarMfY9hJp2agA1ltgHqAelrkb2bqmn/Ck2jqMbfeqVfZ/bmlnwXNbIKDmuNXZqsrU/OROBc0gA3ZdQCik1wyyM3+GVRaJsDXW65C3aXcUCei8h+KteyWVvZ8T2+F7ZJs0La3axhPHm4+4W72p+INNo9LNPCROWPbDGWAmHv33tDnjFCiTR6eq+bOkl1DnTSSF8z3vfIT+pzibd/cLZpU4TVvRi1c90XDPsnRHIpLhJsszRYc01+oVYcPOiPqrG928C6Hq2x9ivRw+Qi+JrB5+ejl/RlaPNWmB/8AS5rr6cH74+6rLXNNOaR7ghboWws+ryZJ1zh9kJCEK0qBGeiEY6pNAVJo+S6YtNlplJAOdow4g+aqsuhWsyZOuqVjxFHOM4GT0rlXx6WV9FxDB0DrLj7NGV1t7mIgRsAsg7icke5yoyTAOZRxg+HyvyXMt+Qb4rWDoV6JLmbGyCOKiGNOD4pSb+Q4Scf1G2g+l59PJVvmJvI8R6eQ8lUXEk5yRfmf3XOlOU3mTyb4xUFiKCZ8hadsnFYGP2XMe9poLhTnDnjPKsfe2+L/AMlCzVgXXh+ZFmvb+VEZHaXbnB2LNWeirayQucbv6dfdWf4dHkHPKTGEAuD7Fiq8xlAjZ/DbydTqoHmi8MlZ6uFtd/C9gwGM8mj9ivmzHaiLbNE4skicJGPYfEHBe07I7d03aTY4ptkOvHhdGMR6ihe+H182/SxxkuredyN1FqS2s1tRAyZu4UH1/wB1+axZ9PlwLcnkFekZEXAObkHy6fwqJ9JvdhpLunkVni8GlpM803RwvxRx9vqtfR9j6S2umj7x1gtZK97mN92k0fmF2RaLaQ4iyPTAWoyERxbi0lxFAcfJScmxbUjy/wCK2xt7KZFG0NZHrNKAGBrQMSYAGF4kNawgEkF4sX0I8qXufxmO77K0bLqSbtCJzv8Apjk/a14l26qcLHA9DzYWqn6mG/7ja9hy0HdWRgWfS0C2kOvwk4woAt3bmk+TvO/NWBw/T8WT1FdPmrzOXB1V5YVglJABAIGSKBA+uFxiRrSWkknpm/spNe81tbjr5IXHoZe5kZ67L4Odp9wq3RvbmseYyEiJDjcAKqvI/RDXTg1ubbeCeCL49luq1tkOHyjJZpYT5XDEi8qYfG8ODo2sdttu2ueCFDjqP3XXo1Eb87Tm3USq9iilgY7xXuFndeGjiwPNXPnBDXN/SfCCaA+azS5ri88EmlewOotGQRVGqr1XnrLJWS3SOzCCgsRRa/UDde67FYUXTMBBtxqxhVuMQAtuReP903PbimAi/n9lWWFnesx+r/WE+8biya44vnCh3mLEY+/Ce9pyY/8AP7IAm5zS0gEcf6wqA98IAlAMZJp4HBJ4eP5TPdEOGW8cpHEf6wccc4vyQIteGECtpvjNgjzBCj3YDQAaLv59VVHHK1p2nwfqDa/S7zaSrnMe8NeXGx88/sgCTdjWlrjuJzz5+65CNrgRbXNdbSDnBsZC7mtZhwAOLXNLiVzejhuHrWCEAeq7A/FcUL2afthzwLAZq2NL69NQxuT/APYC/MHlfRInaPWwifSywTQ2Gul0sjJWWficyx9V8Nc01YyPXkfNWaTV63QzNn0Won08zf64JHRv8s0chUSpT9GiNzXDPuY0bQNwyeimYGv7tgbnn1K+YaX/AMQPxRp4TA9mi1T7OzUauA942/PuXMYa9W/VcWr/ABV+KtZp9RBN2iXRTxmOVkUOniuM5LQYow6j1yq/BIs86On8Z9qaXWdoQ6fSSiTT6HwvljcHRyTPI37CMEDi1i1bBWRjlcEgphPG2j9wu5tmNpwcWOnK0xiorCM05OTyykMFPrnPCj3bi0G85PNH7q1uQ/F9f4QHtLCCaJ4DhyD7qRArDAAHbSXdL/zU2mR1nwtAoZ5U23twTlwsdALsKsh+8kkhhuhwgCdR4JcSfTj5lRe2MAODjg5PGFY1rNpoA4vnPvkpbWO3DGR6oArbTJGncC11kDpwrHu3ZA9PdUhrWmMmvC5za6cLpYGm7bjkDH8rTprfFYpFN9fkhtMyqIvzJtXtP6S01QAUTtlEezkZSLZGU5osc4/dZi0veSQHFpJbea6IMh2tpozScErTgm+BRQ7w7m2MGx5EXXCBhukLQdvIHRSBmrhtcEEAf5oZRaPKs2fWuisaCR0rPArCAOeS9r9wINGnDp5FWx909jXBrWgiiGgeFw5Cb2miKHBvhVRHa8NrEn6R/wDI3P3H7IAuZzXPQXXllOOrLTwf2pJwsh4xnnPum+/C8debzxnKABli2np7KjVNI2PGSx31B5Cvcf0uBvg/JRnDSznmjV9EDOcG89CPsoOjByAiPFsPLSa9lZSQFIwcjPzVrTx180EA3YSgbK86mIRB0jIJJ2Hc7DIxbyA016/JMTCQEtkF8ur5XhWwSgxNBbeORzaqJ/5QJzYLiOtC09NJUbgWmhus+3ogZexzS12Rz1/sntBYb4zV+ag0RmN5JDftfTjhMRPEe5r8Z9M36IETa0bWADhx91CrBBybIr0TaZGtBIvBz/sm5pAa7zrofLKABmA4GgBZHPKbB4fmKSePDuF03HXhWNqm1xg8+fVAHM8f4wA6gu+qtifkk1xQvjlVuc0PlcKwBGzjLjkpRuaOCSK54FoQeziic5smDVlwK7wLIv4Nx9TQQhDEjmnHduDm4uj6K39cTy7loJHvupCEDJRuPdt45d9iF00OPMEm0IQBJjQ8vBsAR3jHRcUo2sdRNxzDaeoooQgDrA3CW+gsemL6qB8MO6rJNZQhICoPeY354sCvkmxodFKTdigPnaEJgUf+qPVufsrB/CEJDBVPJDmuBIPibYNeFzSCEITBkqt7fZ3/AOVLSGhIKH6nDPkShCBF5DS1rdoyX5HOLSe0NjxfLfvlCEADXODW59M/NTbmNwOaaSPqhCBlQcS2Zl+EUK9wSmANrBXLc+eBaEIEUhjXAE3d/wAq2NrXPcDgNBAAwOUIQI//2Q=="], ["created_at", "2023-07-28 13:11:15.246830"], ["updated_at", "2023-07-28 13:11:15.246830"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["email", nil]]
+  [1m[36mTRANSACTION (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.6ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (3.0ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 1"], ["products_ordered", "Product A, Product B"], ["date", "2023-07-28"], ["merchandiser_id", 1], ["created_at", "2023-07-28 13:11:15.599132"], ["updated_at", "2023-07-28 13:11:15.599132"], ["location", "Location A"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (1.0ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mOrder Create (2.4ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 2"], ["products_ordered", "Product C, Product D"], ["date", "2023-07-27"], ["merchandiser_id", 4], ["created_at", "2023-07-28 13:11:15.632248"], ["updated_at", "2023-07-28 13:11:15.632248"], ["location", "Location B"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (1.4ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Admin 1"], ["password", "[FILTERED]"], ["created_at", "2023-07-28 13:12:30.610255"], ["updated_at", "2023-07-28 13:12:30.610255"]]
+  [1m[36mTRANSACTION (3.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Create (13.5ms)[0m  [1m[32mINSERT INTO "admins" ("name", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Admin 2"], ["password", "[FILTERED]"], ["created_at", "2023-07-28 13:12:30.621172"], ["updated_at", "2023-07-28 13:12:30.621172"]]
+  [1m[36mTRANSACTION (13.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (6.6ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password", "password_digest", "email") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "John Doe"], ["id_number", "MID12345"], ["phone_number", "1234567890"], ["vehicle_registration", "ABC123"], ["status", "Active"], ["profile_picture", "https://th.bing.com/th/id/OIP.xmoqMw4IxOLVAks0X8JBJgHaHx?w=176&h=185&c=7&r=0&o=5&pid=1.7"], ["created_at", "2023-07-28 13:12:31.142795"], ["updated_at", "2023-07-28 13:12:31.142795"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["email", nil]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Create (7.5ms)[0m  [1m[32mINSERT INTO "merchandisers" ("name", "id_number", "phone_number", "vehicle_registration", "status", "profile_picture", "created_at", "updated_at", "password", "password_digest", "email") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Elon Musk"], ["id_number", "MID67890"], ["phone_number", "9876543210"], ["vehicle_registration", "XYZ789"], ["status", "Inactive"], ["profile_picture", "data:image/jpeg;base64,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"], ["created_at", "2023-07-28 13:12:31.605100"], ["updated_at", "2023-07-28 13:12:31.605100"], ["password", "[FILTERED]"], ["password_digest", "[FILTERED]"], ["email", nil]]
+  [1m[36mTRANSACTION (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.6ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.8ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 1"], ["products_ordered", "Product A, Product B"], ["date", "2023-07-28"], ["merchandiser_id", 1], ["created_at", "2023-07-28 13:12:31.693958"], ["updated_at", "2023-07-28 13:12:31.693958"], ["location", "Location A"]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" ORDER BY "merchandisers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMerchandiser Load (0.3ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mOrder Create (1.9ms)[0m  [1m[32mINSERT INTO "orders" ("customer_name", "products_ordered", "date", "merchandiser_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["customer_name", "Customer 2"], ["products_ordered", "Product C, Product D"], ["date", "2023-07-27"], ["merchandiser_id", 6], ["created_at", "2023-07-28 13:12:31.711994"], ["updated_at", "2023-07-28 13:12:31.711994"], ["location", "Location B"]]
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2023-07-30 09:40:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 60.5ms | Allocations: 522)
+Completed 200 OK in 343ms (Views: 120.0ms | ActiveRecord: 0.0ms | Allocations: 4571)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-30 09:40:53 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 09:41:15 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 09:41:25 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-30 09:42:12 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 187)
+
+
+  
+NameError (uninitialized constant SessionsController::User):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 09:42:38 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 99)
+
+
+  
+NameError (uninitialized constant SessionsController::User):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 09:42:39 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+NameError (uninitialized constant SessionsController::User):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 09:42:46 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+NameError (uninitialized constant SessionsController::User):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 09:42:49 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 101)
+
+
+  
+NameError (uninitialized constant SessionsController::User):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:02:40 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 176)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:02:42 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:02:55 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:02:58 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:02:59 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started GET "/me" for 127.0.0.1 at 2023-07-30 10:03:01 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:05:40 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 155)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:05:43 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:05:48 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:05:48 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:05:49 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:05:51 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started GET "/me" for 127.0.0.1 at 2023-07-30 10:05:54 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:06:14 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:06:17 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:06:23 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:06:24 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:06:24 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:07:23 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 1ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:07:24 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:07:25 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:07:25 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:07:32 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:07:34 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:07:35 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (Allocations: 112)
+
+
+  
+NoMethodError (undefined method `find_by' for nil:NilClass):
+  
+app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:17:09 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 422 Unprocessable Entity in 108ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 4538)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:17:59 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 422 Unprocessable Entity in 75ms (Views: 0.5ms | ActiveRecord: 2.8ms | Allocations: 9508)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:22:14 +0300
+Processing by SessionsController#create as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 422 Unprocessable Entity in 28ms (Views: 0.8ms | ActiveRecord: 3.0ms | Allocations: 2903)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-30 10:34:10 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:34:21 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 32ms (Views: 0.9ms | ActiveRecord: 1.7ms | Allocations: 2551)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:42:11 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 10ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 851)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:42:41 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"email"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 7ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 681)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-30 10:48:15 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-30 10:48:26 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"username"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"username"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.6ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.6ms | ActiveRecord: 2.2ms | Allocations: 857)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-30 11:24:06 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"username"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"username"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 25ms (Views: 0.7ms | ActiveRecord: 1.7ms | Allocations: 2541)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-30 11:24:38 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-30 11:24:42 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"username"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"username"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.9ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 10ms (Views: 0.6ms | ActiveRecord: 0.9ms | Allocations: 681)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:27:58 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-30 19:28:09 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"username"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"username"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (1.0ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 49ms (Views: 1.1ms | ActiveRecord: 4.7ms | Allocations: 851)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-30 19:34:13 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"John Doe", "password"=>"[FILTERED]", "session"=>{"name"=>"John Doe", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (1.6ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "John Doe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 61ms (Views: 0.6ms | ActiveRecord: 4.6ms | Allocations: 3548)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-30 19:34:21 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"John Doe", "password"=>"[FILTERED]", "session"=>{"name"=>"John Doe", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.6ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "John Doe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 6ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 561)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-30 19:35:02 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"John Doe", "password"=>"[FILTERED]", "session"=>{"name"=>"John Doe", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "John Doe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 6ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 562)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:35:27 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/main.7bfe1143bfefc9818819.hot-update.json" for 127.0.0.1 at 2023-07-30 19:38:03 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/main.7bfe1143bfefc9818819.hot-update.json"):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:38:04 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:38:05 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:41:07 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:41:23 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:41:35 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:41:39 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:41:45 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:44:14 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:44:14 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:44:28 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:55:29 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:55:34 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:55:40 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:55:49 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:55:52 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:56:20 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:57:45 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 19:57:53 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:01:58 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:02:21 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:03:01 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:07:34 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:07:49 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:07:55 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:07:58 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:11:02 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:11:02 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:11:06 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:11:24 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:11:33 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:15:58 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:16:07 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:18:17 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:18:28 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:24:20 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:24:20 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:27:06 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:27:06 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:28:54 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-30 20:28:54 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-31 08:39:32 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-31 08:39:33 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-31 08:48:48 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-31 08:59:27 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (1.2ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "john@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 81ms (Views: 3.5ms | ActiveRecord: 9.9ms | Allocations: 715)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 08:59:36 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.6ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "john@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 9ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 545)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 09:01:47 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/me" for 127.0.0.1 at 2023-07-31 09:01:49 +0300
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started POST "/login" for 127.0.0.1 at 2023-07-31 09:03:29 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.8ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "john@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 100ms (Views: 0.9ms | ActiveRecord: 2.3ms | Allocations: 2832)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 09:03:48 +0300
+  
+SyntaxError (C:/Users/ADMIN/Desktop/mash-planner/mashplannr-backend/app/controllers/merchandisers_controller.rb:22: syntax error, unexpected '}'
+... name: merchandiser.name, ... }, status: :created
+...                              ^
+):
+  
+app/controllers/merchandisers_controller.rb:22: syntax error, unexpected '}'
+app/controllers/merchandisers_controller.rb:22: syntax error, unexpected '}'
+Started GET "/me" for 127.0.0.1 at 2023-07-31 09:05:15 +0300
+  
+SyntaxError (C:/Users/ADMIN/Desktop/mash-planner/mashplannr-backend/app/controllers/merchandisers_controller.rb:23: syntax error, unexpected '}'
+... name: merchandiser.name, ... }, status: :created
+...                              ^
+):
+  
+app/controllers/merchandisers_controller.rb:23: syntax error, unexpected '}'
+app/controllers/merchandisers_controller.rb:23: syntax error, unexpected '}'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 09:05:24 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.7ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "john@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 121ms (Views: 1.0ms | ActiveRecord: 3.5ms | Allocations: 2832)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 09:05:49 +0300
+  
+SyntaxError (C:/Users/ADMIN/Desktop/mash-planner/mashplannr-backend/app/controllers/merchandisers_controller.rb:23: syntax error, unexpected '}'
+... name: merchandiser.name, ... }, status: :created
+...                              ^
+):
+  
+app/controllers/merchandisers_controller.rb:23: syntax error, unexpected '}'
+app/controllers/merchandisers_controller.rb:23: syntax error, unexpected '}'
+Started GET "/me" for 127.0.0.1 at 2023-07-31 09:06:44 +0300
+Started POST "/login" for 127.0.0.1 at 2023-07-31 09:06:47 +0300
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 2ms (Allocations: 132)
+
+
+  
+NoMethodError (undefined method `authenticate_user' for #<MerchandisersController:0x00000000034c38>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "john@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 22ms (Views: 0.5ms | ActiveRecord: 2.1ms | Allocations: 2833)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 09:07:31 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "john@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 19ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 2832)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 09:07:39 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "john@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 544)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-31 09:22:45 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby32-x64/lib/ruby/gems/3.2.0/gems/railties-7.0.6/lib/rails/templates/rails/welcome/index.html.erb (Duration: 107.1ms | Allocations: 522)
+Completed 200 OK in 683ms (Views: 221.4ms | ActiveRecord: 0.0ms | Allocations: 4572)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 09:24:54 +0300
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 173)
+
+
+  
+NoMethodError (undefined method `authenticate_merchandisers' for #<MerchandisersController:0x00000000009380>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/login" for 127.0.0.1 at 2023-07-31 09:25:04 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"john@gmail.com", "password"=>"[FILTERED]", "session"=>{"name"=>"john@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "john@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 112ms (Views: 0.7ms | ActiveRecord: 1.3ms | Allocations: 4461)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 09:26:34 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"John Doe", "password"=>"[FILTERED]", "session"=>{"name"=>"John Doe", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "John Doe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 346ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 10960)
+
+
+Started POST "/login" for 127.0.0.1 at 2023-07-31 09:57:26 +0300
+Processing by SessionsController#login as */*
+  Parameters: {"name"=>"John Doe", "password"=>"[FILTERED]", "session"=>{"name"=>"John Doe", "password"=>"[FILTERED]"}}
+  [1m[36mMerchandiser Load (0.4ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers" WHERE "merchandisers"."name" = ? LIMIT ?[0m  [["name", "John Doe"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `login'
+Completed 422 Unprocessable Entity in 9ms (Views: 0.5ms | ActiveRecord: 1.2ms | Allocations: 760)
+
+
+Started GET "/me" for 127.0.0.1 at 2023-07-31 10:05:49 +0300
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 1ms (Allocations: 88)
+
+
+  
+NoMethodError (undefined method `authenticate_merchandisers' for #<MerchandisersController:0x000000000096c8>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/me" for 127.0.0.1 at 2023-07-31 10:19:03 +0300
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 1ms (Allocations: 87)
+
+
+  
+NoMethodError (undefined method `authenticate_merchandisers' for #<MerchandisersController:0x00000000009740>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/me" for 127.0.0.1 at 2023-07-31 10:19:10 +0300
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 0ms (Allocations: 87)
+
+
+  
+NoMethodError (undefined method `authenticate_merchandisers' for #<MerchandisersController:0x000000000097b8>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for 127.0.0.1 at 2023-07-31 10:25:02 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/orders" for ::1 at 2023-07-31 10:33:18 +0300
+Started GET "/merchandisers" for ::1 at 2023-07-31 10:33:19 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 10:33:19 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.7ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:6:in `index'
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 1.5ms | Allocations: 2355)
+
+
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 87)
+
+
+  
+NoMethodError (undefined method `authenticate_merchandisers' for #<MerchandisersController:0x00000000009ab0>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 193ms (Views: 61.0ms | ActiveRecord: 3.0ms | Allocations: 7194)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-31 10:33:33 +0300
+Started GET "/orders" for ::1 at 2023-07-31 10:33:33 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.9ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+Started GET "/me" for 127.0.0.1 at 2023-07-31 10:33:33 +0300
+  ↳ app/controllers/merchandisers_controller.rb:6:in `index'
+Completed 200 OK in 107ms (Views: 104.6ms | ActiveRecord: 0.9ms | Allocations: 1941)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 65ms (Views: 63.0ms | ActiveRecord: 0.7ms | Allocations: 1702)
+
+
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 88)
+
+
+  
+NoMethodError (undefined method `authenticate_merchandisers' for #<MerchandisersController:0x00000000009c40>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/orders" for ::1 at 2023-07-31 10:33:33 +0300
+Started GET "/me" for 127.0.0.1 at 2023-07-31 10:33:34 +0300
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 1691)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-31 10:33:34 +0300
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 87)
+
+
+  
+NoMethodError (undefined method `authenticate_merchandisers' for #<MerchandisersController:0x00000000009ce0>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.5ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:6:in `index'
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.5ms | Allocations: 1927)
+
+
+Started GET "/merchandisers" for ::1 at 2023-07-31 10:34:32 +0300
+Started GET "/orders" for ::1 at 2023-07-31 10:34:32 +0300
+Processing by MerchandisersController#index as */*
+  [1m[36mMerchandiser Load (0.3ms)[0m  [1m[34mSELECT "merchandisers".* FROM "merchandisers"[0m
+  ↳ app/controllers/merchandisers_controller.rb:6:in `index'
+Started GET "/me" for 127.0.0.1 at 2023-07-31 10:34:32 +0300
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 2134)
+
+
+Processing by OrdersController#index as */*
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/controllers/orders_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 1693)
+
+
+Processing by MerchandisersController#show as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 87)
+
+
+  
+NoMethodError (undefined method `authenticate_merchandisers' for #<MerchandisersController:0x00000000009e98>):
+  
+activesupport (7.0.6) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.6) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.6) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.6) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.6) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.6) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/rescue.rb:23:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.6) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.6) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.6) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.6) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.6) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.6) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.6) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.6) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.6) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.6) lib/action_dispatch/routing/route_set.rb:852:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+activerecord (7.0.6) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.6) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.6) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.6) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.6) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.6) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.6) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.6) lib/rails/engine.rb:530:in `call'
+puma (5.6.6) lib/puma/configuration.rb:252:in `call'
+puma (5.6.6) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.6) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.6) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.6) lib/puma/server.rb:443:in `process_client'
+puma (5.6.6) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
