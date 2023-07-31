@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   resources :admins
 
 
-post "/signup", to: 'users#create'
-get "/me", to:'users#show'
-post "/login", to: 'sessions#create'
+post "/signup", to: 'merchandisers#create'
+get "/me", to:'merchandisers#show'
+post "/login", to: 'sessions#login'
 delete '/logout', to:'sessions#destroy'
 end
