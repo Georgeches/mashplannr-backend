@@ -7,6 +7,7 @@ ruby "3.0.2"
 gem "rails", "~> 7.0.6"
 gem 'jwt'
 gem 'bcrypt'
+gem 'rack-cors'
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
