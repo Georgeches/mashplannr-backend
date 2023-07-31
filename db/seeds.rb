@@ -1,4 +1,9 @@
 # Seed data for Admins
+Admin.destroy_all
+Merchandiser.destroy_all
+Order.destroy_all
+
+
 Admin.create(name: 'Admin 1', password: 'admin_password_1')
 Admin.create(name: 'Admin 2', password: 'admin_password_2')
 
