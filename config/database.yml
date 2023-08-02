@@ -82,6 +82,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: mashpq_backends_production
   username: mashpq_backends
   password: <%= ENV["MASHPQ_BACKENDS_DATABASE_PASSWORD"] %>
