@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  belongs_to :merchandiser
+   belongs_to :merchandiser
 
   validates :customer_name, presence: true
   validates :products_ordered, presence: true

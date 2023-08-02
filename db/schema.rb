@@ -10,12 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_28_130742) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_31_171412) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "name"
   end
 
   create_table "merchandisers", force: :cascade do |t|
@@ -24,20 +28,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_28_130742) do
     t.string "phone_number"
     t.string "vehicle_registration"
     t.string "status"
+    t.string "email"
     t.string "profile_picture"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "password_digest"
-
-    t.string "password_digest"
-    t.string "email"
+    t.string "password"
   end
 
   create_table "orders", force: :cascade do |t|
     t.string "customer_name"
     t.string "products_ordered"
     t.date "date"
-    t.integer "merchandiser_id", null: false
+    t.bigint "merchandiser_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "location"

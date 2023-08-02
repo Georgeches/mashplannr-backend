@@ -1,8 +1,7 @@
 class Merchandiser < ApplicationRecord
-    
-    has_secure_password
+   
     has_many :orders
-
+    has_secure_password
 
     validates :name, presence: true
     validates :password, presence: true

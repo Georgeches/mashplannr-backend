@@ -12,28 +12,16 @@ require "action_controller/railtie"
 # require "action_text/engine"
 require "action_view/railtie"
 # require "action_cable/engine"
-# require "sprockets/railtie"
-# require "rails/test_unit/railtie"
+require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Phase4RailsPuttingItAllTogetherAuth
+module MashpqBackends
   class Application < Rails::Application
-    # Adding cookies and session middleware
-    config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore
-
-    # Use SameSite=Strict for all cookies to help protect against CSRF
-    # https://owasp.org/www-community/SameSite
-    config.action_dispatch.cookies_same_site_protection = :strict
-
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-     config.middleware.use ActionDispatch::Cookies
-    config.middleware.use ActionDispatch::Session::CookieStore
-     config.action_dispatch.cookies_same_site_protection = :strict
 
     # Configuration for the application, engines, and railties goes here.
     #
