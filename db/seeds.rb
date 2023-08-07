@@ -32,18 +32,29 @@ Merchandiser.create(
 
 # Seed data for Orders
 Order.create(
-  customer_name: 'OneStop Enterprises',
-  products_ordered: 'Product A, Product B',
+  customer_name: 'Naivas Supermarket- Prestige',
+  products_ordered: 'Soap, Detergent',
   date: Date.today,
-  location: 'Location A',
-  merchandiser_id: Merchandiser.first.id
+  location: 'MQXP+RR Nairobi',
+  merchandiser_id: Merchandiser.first.id,
+  sale: 10000
 )
 Order.create(
-  customer_name: 'Obama Shop',
-  products_ordered: 'Product C, Product D',
-  date: Date.today - 1.day,
-  location: 'Location B',
-  merchandiser_id: Merchandiser.last.id
+  customer_name: 'Quickmart Utawala',
+  products_ordered: 'Soda, Flour',
+  date: Date.today - 8.day,
+  location: 'PX85+RW Nairobi',
+  merchandiser_id: Merchandiser.last.id,
+  sale: 20000
+)
+
+Order.create(
+  customer_name: 'Quickmart Kilimani',
+  products_ordered: 'Vegetables, Bread',
+  date: Date.today - 2.day,
+  location: 'PX85+RW Nairobi',
+  merchandiser_id: Merchandiser.last.id,
+  sale: 15000
 )
 
 puts 'seeding done'
