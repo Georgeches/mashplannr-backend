@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   post "/login", to: 'sessions#create'
   delete '/logout', to:'sessions#destroy'
   patch '/reset', to:'merchandisers#reset'
+  get '/api/orders/filter', to: 'orders#filter'
 end
