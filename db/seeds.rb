@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-Admin.create(username: 'Arama', password: 'eric123', name: "Eric Arama")
-Admin.create(username: 'Chesire', password: 'george123', name: "George Chesire")
-
+Admin.create(username: 'Arama', password: 'eric123', name: "Eric Arama" , email: "aramaeric3@gmail.com")
+Admin.create(username: 'Chesire', password: 'george123', name: "George Chesire" , email: "chesire608@gmail.com")
+Admin.create(username: 'Feisal', password: 'feisal123', name: "Feisal Keli" , email: "kellyfeisal2000@gmail.com")
 # Seed data for Merchandisers
 Merchandiser.create(
   name: 'John Doe',
